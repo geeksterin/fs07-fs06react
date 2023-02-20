@@ -1,0 +1,33 @@
+{
+  "name": "geekster-oct-react",
+  "version": "1.0.0",
+  "description": "this is 2nd class of react",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "hellotest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rishabh32700/helloRepo.git"
+  },
+  "keywords": [
+    "geekster",
+    "reactBatch",
+    "Rishabh"
+  ],
+  "author": "Rishabh Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rishabh32700/helloRepo/issues"
+  },
+  "homepage": "https://github.com/Rishabh32700/helloRepo#readme",
+  "dependencies": {
+    "parcel": "^2.8.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}

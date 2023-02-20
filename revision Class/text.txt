@@ -1,0 +1,86 @@
+1. what is react
+    JS Library for building UI
+    react is used to create a SPA
+    react is used to build component based UI 
+    react  can support other libraries in it
+    react is based on the concept of virtual DOM
+
+============================================================================
+
+2. what are components in react
+    reuseable code
+    better performance we divide our whole app in atomic parts and these atomic parts are known as fomponents
+    components are just like JS functions 
+    it returns us a JSX
+    2 types of components
+        Functional component
+        Class component
+
+const Hello = () =>{
+    return(
+        <div></div>
+)}
+export default Hello
+
+===================================================================================
+
+3. diff bet export and export default
+    export is named export
+    default => default export
+
+===================================================================================
+
+Hello (def)
+Bye1
+Bye2
+Bye3
+
+import Hello, {Bye1, Bye2, Bye3 as Rishabh} from "./Hello.jsx" 
+
+===================================================================================
+
+why react is fast
+
+Virtual DOM
+Bundlers
+
+===================================================================================
+
+what doees Babel do 
+
+===================================================================================
+
+what is JSX
+<>
+    <p>hello {console.log("hello")}</p>
+</>
+
+===================================================================================
+
+what are props in react
+
+<FunctionName name="name" />
+
+*********************************
+(props)
+props.name
+*********************************
+
+({name})
+name
+===================================================================================
+
+what is prop drilling
+
+===================================================================================
+
+what is batching in react
+
+setState("hello")
+setState("hello1")
+setState("hello2")
+setState("hello4")
+setState("hello5")
+setState("hello6")
+
+===================================================================================
