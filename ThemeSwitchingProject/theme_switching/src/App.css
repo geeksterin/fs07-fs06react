@@ -1,0 +1,33 @@
+.CompContainer{
+  border: 2px solid red;
+  height: 90vh;
+  display: flex;
+}
+
+.leftContainer{
+  width: 60%;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  justify-content: center;
+  align-items: center ;
+}
+
+.leftContainer h1{
+  font-size: 3rem;
+}
+
+.RightContainer{
+  border: 2px solid red;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.RightContainer img{
+  /* width: 50%; */
+  height: 80%;
+}
+
