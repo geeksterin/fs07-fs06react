@@ -1,0 +1,17 @@
+.ListToShow{
+    /* border: 2px solid red; */
+    width: 300px;
+    margin-top: 2rem;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+.ListToShow div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+    width: 100%;
+    border: 2px solid black;
+    margin: 1rem 0;
+}
