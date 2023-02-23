@@ -2,7 +2,12 @@ import { useState } from "react";
 import "./App.css";
 import ButtonComp from "./components/ButtonComp";
 import CheckBox from "./components/CheckBox";
-import { numberArray,symbolsArray,lowerCaseArray,upperCaseArray, } from "./components/Constants";
+import {
+  numberArray,
+  symbolsArray,
+  lowerCaseArray,
+  upperCaseArray,
+} from "./components/Constants";
 import Length from "./components/Length";
 import PasswordGenerator from "./components/PasswordGenerator";
 
@@ -16,6 +21,8 @@ function App() {
   });
 
   const [handelText, setHandelText] = useState("");
+  const [copied, setCopied] = useState(false);
+  const [generatedPass, setGenPass] = useState(false)
 
   const handelUppercaseChange = () => {
     setPassword({
@@ -49,7 +56,6 @@ function App() {
   };
 
   const generatePassword = () => {
-
     const { uppercase, lowercase, number, symbols, length } = password;
 
     const generateWord = (uppercase, lowercase, number, symbols, length) => {
@@ -61,14 +67,18 @@ function App() {
       ];
 
       const shuffleArray = (array) => {
-        return array.sort(() =>  Math.random() - 0.5);
-        
+        return array.sort(() => Math.random() - 0.5);
       };
 
       const char = shuffleArray(availableValue).slice(0, length);
       console.log(char.join(""));
-      setHandelText(char.join(""))
-      return char
+      setHandelText(char.join(""));
+      setGenPass(true)
+      setInterval(()=>{
+        setGenPass(false)
+
+      },3000)
+      return char;
     };
 
     generateWord(uppercase, lowercase, number, symbols, length);
@@ -80,13 +90,15 @@ function App() {
         <PasswordGenerator
           handelText={handelText}
           setHandelText={setHandelText}
+          copied={copied}
+          setCopied={setCopied}
         />
         <CheckBox label={"uppercase"} onchange={handelUppercaseChange} />
         <CheckBox label={"lowercase"} onchange={handelLowercaseChange} />
         <CheckBox label={"number"} onchange={handelNumberChange} />
         <CheckBox label={"symbols"} onchange={handelSymbolChange} />
         <Length label={"length"} onchange={handelLengthChange} />
-        <ButtonComp onclick={generatePassword} />
+        <ButtonComp onclick={generatePassword} generatedPass={generatedPass} setGenPass={setGenPass} />
       </header>
     </div>
   );
