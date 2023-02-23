@@ -1,6 +1,9 @@
 import React from 'react'
 
 const ButtonComp = ({onclick, generatedPass}) => {
+  function name() {
+    return "lime"
+  }
   return (
     <>
     <div style={{ marginTop:"2rem",}} >
@@ -11,7 +14,7 @@ const ButtonComp = ({onclick, generatedPass}) => {
                   border: "none",
                   outline: "none",
                   cursor: "pointer",
-                  backgroundColor: "lime",
+                  backgroundColor: name(),
                   color: "red",
                   fontSize: ".9rem",
                   fontWeight: "600",
