@@ -10,8 +10,8 @@ function App() {
   useEffect(() => {
     // setstate(state+1)
     console.log("hello");
-  },[state]);
-
+  }, []);
+  console.log("byebye");
   function name() {
     console.log("hello");
   }
