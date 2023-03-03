@@ -263,6 +263,7 @@ const navigate = useNavigate()
             className={classes.card}
             onClick={()=>{
                 context.setstate(tile)
+                localStorage.setItem("currentProductDetails", JSON.stringify(tile))
                 navigate("/product")
             }}
           >

@@ -1,0 +1,116 @@
+.product{
+    display: flex;
+    height:90vh;
+    width:100%;
+    box-sizing: border-box;
+}
+.product-left{
+    border-radius: 5px;
+    padding: 2rem;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    height: 80%;
+    border-style: none;
+
+}
+.heart{
+    top: 75px;
+    position: absolute;
+    height: 1rem;
+    width: 20px;
+    /* border: 2px solid #c7c6c6; */
+    /* box-shadow: 2px 2px #a5a5a5; */
+    /* bordeR: 2px solid red; */
+    left: 26rem;
+    padding: 10px;
+}
+.product-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    width:60%;
+    height:77%;
+}
+.btn_data{
+    margin: 20px;
+    width:70%;
+    justify-content: space-between;
+    display: flex;
+}
+#btn_cart{
+    cursor: pointer;
+    padding:20px 20px;
+    width: 10rem;
+    border-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(45deg, #ffc609, #ff9800);
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 16px;
+    color:white;
+    box-shadow: 2px 2px 2px burlywood;
+}
+#btn_cart:hover{
+    background: linear-gradient(45deg, #008cff, #1100ff);
+}
+#btn_checkout:hover{
+    background: linear-gradient(45deg, #366600, #007e00);
+}
+#btn_checkout{
+    cursor: pointer;
+    padding:20px 20px;
+    width: 10rem;
+    border-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(45deg, #ff5e00, #ff5100);
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 16px;
+    color:white;
+    box-shadow: 2px 2px 2px burlywood;
+}
+#products_title{
+    padding-bottom: 15px;
+    font-size: 22px;
+    font-weight: 400;
+}
+#products_price{
+    padding-bottom: 15px;
+    font-size: 32px;
+    font-weight: 400;
+}
+#products_desc{
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.box_rating{
+    display: flex;
+    width: 50%;
+    height:10%;
+}
+#rating{
+    display: flex;
+    justify-content: space-around;
+    height: 85%;
+    width: 15%;
+    border-radius: 5px;
+    background: green;
+    border-style: none;
+    /* border: 1px solid black; */
+    margin-right:10px;
+    padding: 5px 0px;
+    color: white;
+}
+#offer{
+    padding:10px;
+}
