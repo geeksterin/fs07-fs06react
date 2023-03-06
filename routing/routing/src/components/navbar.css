@@ -7,3 +7,18 @@ ul{
 ul li{
     margin: 2rem;
 }
+
+.nav-bar-link{
+    text-decoration: none;
+    color: red;
+    font-weight: 900;
+    
+}
+
+.nav-bar-link:hover{
+    color: yellow;
+}
+
+ul .active{
+    color: green;
+}
