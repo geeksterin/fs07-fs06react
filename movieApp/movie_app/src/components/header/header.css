@@ -1,0 +1,42 @@
+.header{
+    padding: .5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-bottom: 1px solid rgb(77, 77, 77); */
+    box-shadow: 2px 2px 6px  grey;
+}
+
+.headerLeft{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.headerLeft a{
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.headerIcon{
+    font-size: 2.5rem !important;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerLeft input{
+    padding: .3rem 1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+}
