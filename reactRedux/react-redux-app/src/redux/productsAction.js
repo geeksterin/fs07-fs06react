@@ -1,5 +1,5 @@
-export const productAction = () =>{
-    const data ="hello"
+export const productAction = (data) =>{
+    // const data ="hello"
     return {
         type: "Product_Action_Type",
         data : data

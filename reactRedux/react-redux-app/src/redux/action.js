@@ -4,7 +4,7 @@ export const addToCart = (data) => {
     data: data
   };
 };
-export const removeFromCart = (data) => {
+export const removeFromCart = (data) => {  
   return {
     type: "Remove_from_cart",
     data: data
