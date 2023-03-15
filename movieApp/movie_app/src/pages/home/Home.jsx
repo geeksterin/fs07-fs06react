@@ -1,13 +1,24 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { globalData } from "../../App";
 import { Link } from "react-router-dom";
-
+import { useState } from "react";
+import MovieList from "../../components/movieList/MovieList";
+import './home.css'
 const Home = () => {
   const context = useContext(globalData);
   console.log("context", context);
-
+  const [allMovies, setAllMovies] = useState(context);
+  useEffect(() => {
+    console.log("useEffect run");
+    setAllMovies([
+      ...context.popularMoviesFromApi,
+      ...context.topRatedMoviesFromApi,
+      ...context.upcomingMoviesFromApi,
+    ]);
+  }, [context]);
+  console.log("allMovies", allMovies);
   return (
     <>
       <div className="home">
@@ -47,6 +58,7 @@ const Home = () => {
               );
             })}
           </Carousel>
+          <MovieList />
         </div>
       </div>
     </>

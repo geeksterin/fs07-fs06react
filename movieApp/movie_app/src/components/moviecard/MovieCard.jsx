@@ -1,9 +1,46 @@
-import React from 'react'
+import React from "react";
+import "./moviecard.css";
+import { Link } from "react-router-dom";
 
-const MovieCard = ({movieDetails}) => {
+const MovieCard = ({ allMovies }) => {
+  console.log("allMovies from moviecard", allMovies);
   return (
-    <div>{console.log("movieDetails", movieDetails)}</div>
-  )
-}
+    <>
+      <div className="mainCardContainer">
+        {typeof allMovies !== "object" || allMovies.length !== 0 ? (
+          <>
+            {allMovies.map((ele) => {
+              return (
+                <>
+                  <Link to={`/movie/${ele.id}`}>
+                    <div className="card">
+                      <img
+                        className="cardImg"
+                        src={`https://image.tmdb.org/t/p/original/${
+                          ele && ele.poster_path
+                        }`}
+                        alt=""
+                      />
+                      <div className="cardOverlay">
+                        <div className="card_Title">
+                          {ele && ele.original_title}
+                        </div>
+                        <div className="posterImageReleasingDateRating">
+                          {ele && ele.release_date}
+                          <span>{ele && ele.vote_average}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </>
+              );
+            })}
+          </>
+        ) : // <>hello</>
+        null}
+      </div>
+    </>
+  );
+};
 
-export default MovieCard
+export default MovieCard;

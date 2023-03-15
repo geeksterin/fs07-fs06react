@@ -7,7 +7,7 @@ const Header = () => {
       <div className="header">
         <div className="headerLeft">
           <Link to="/" className="headerIcon">
-            Mobie App
+            Movie App
           </Link>
           <div className="navbar">
 

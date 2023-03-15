@@ -7,6 +7,10 @@
 
 body{
   height: 100vh;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   background-color: black;
+}
+
+a{
+  color: white;
 }

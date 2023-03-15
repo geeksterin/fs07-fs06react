@@ -1,9 +1,14 @@
-import React from 'react'
-
+import React, { useEffect, useState } from "react";
+import { getMovieListByID } from "../../functions/GetMovieList";
+import { useParams } from "react-router-dom";
 const MovieDetails = () => {
-  return (
-    <div>MovieDetails</div>
-  )
-}
+  const { id } = useParams();
+  const [movies, setMoviesFromApi] = useState({});
+  useEffect(() => {
+    getMovieListByID(id, setMoviesFromApi, movies);
+  }, [id]);
 
-export default MovieDetails
+  return <div>{console.log('moviess',movies)}</div>;
+};
+
+export default MovieDetails;
