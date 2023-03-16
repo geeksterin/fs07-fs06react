@@ -22,3 +22,20 @@ export const getMovieListByID = (id, setMoviesFromApi, movies) => {
       setMoviesFromApi(data);
     });
 };
+
+export const searchedMovies = (e, state, setstate, context) => {
+  const arr = [
+    ...context.popularMoviesFromApi,
+    ...context.topRatedMoviesFromApi,
+    ...context.upcomingMoviesFromApi,
+  ];
+
+  const filteredarr = arr.filter((ele)=>{
+    if((ele.original_title.toUpperCase()).includes(e.target.value.toUpperCase())){
+     
+      return ele
+    }
+    return null
+  })
+  setstate(filteredarr)
+};

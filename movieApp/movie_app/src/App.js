@@ -14,6 +14,7 @@ function App() {
   const [popularMoviesFromApi, setPopularMoviesFromApi] = useState([]);
   const [upcomingMoviesFromApi, setUpcomingMoviesFromApi] = useState([]);
   const [topRatedMoviesFromApi, setTopRatedMoviesFromApi] = useState([]);
+  const [state, setState] = useState([]);
 
   useEffect(() => {
     getMovieList(setPopularMoviesFromApi, "popular");
@@ -27,9 +28,9 @@ function App() {
         popularMoviesFromApi: popularMoviesFromApi,
         topRatedMoviesFromApi: topRatedMoviesFromApi,
         upcomingMoviesFromApi: upcomingMoviesFromApi,
+        state, setState
       }}
     >
-      {console.log(popularMoviesFromApi)}
       <div className="App">
         <Router>
           <Header />

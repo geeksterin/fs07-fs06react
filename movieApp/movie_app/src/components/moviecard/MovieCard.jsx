@@ -3,16 +3,15 @@ import "./moviecard.css";
 import { Link } from "react-router-dom";
 
 const MovieCard = ({ allMovies }) => {
-  console.log("allMovies from moviecard", allMovies);
   return (
     <>
       <div className="mainCardContainer">
         {typeof allMovies !== "object" || allMovies.length !== 0 ? (
           <>
-            {allMovies.map((ele) => {
+            {allMovies.map((ele, idx) => {
               return (
                 <>
-                  <Link to={`/movie/${ele.id}`}>
+                  <Link to={`/movie/${ele.id}`} key={idx}>
                     <div className="card">
                       <img
                         className="cardImg"

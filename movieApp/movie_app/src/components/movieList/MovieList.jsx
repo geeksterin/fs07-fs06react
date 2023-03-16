@@ -5,9 +5,7 @@ import MovieCard from "../moviecard/MovieCard";
 
 const MovieList = ({ allMovies }) => {
   const context = useContext(globalData);
-  console.log("context from movielist", context);
   const { category } = useParams();
-  console.log("allMovies from movielist", allMovies);
   return (
     <>
       <div className="movielist">
@@ -21,7 +19,7 @@ const MovieList = ({ allMovies }) => {
                 ? context.topRatedMoviesFromApi
                 : category === "upcoming"
                 ? context.upcomingMoviesFromApi
-                : [...context.popularMoviesFromApi, ...context.topRatedMoviesFromApi, ...context.upcomingMoviesFromApi]
+                : context.state.length !== 0 ? [...context.state] : [...context.popularMoviesFromApi, ...context.topRatedMoviesFromApi, ...context.upcomingMoviesFromApi]
             }
           />
         </div>

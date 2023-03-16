@@ -8,17 +8,15 @@ import MovieList from "../../components/movieList/MovieList";
 import './home.css'
 const Home = () => {
   const context = useContext(globalData);
-  console.log("context", context);
   const [allMovies, setAllMovies] = useState(context);
+  console.log(allMovies);
   useEffect(() => {
-    console.log("useEffect run");
     setAllMovies([
       ...context.popularMoviesFromApi,
       ...context.topRatedMoviesFromApi,
       ...context.upcomingMoviesFromApi,
     ]);
   }, [context]);
-  console.log("allMovies", allMovies);
   return (
     <>
       <div className="home">
